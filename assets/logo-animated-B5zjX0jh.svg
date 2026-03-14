@@ -1,0 +1,87 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg viewBox="50 50 520 260" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .arrowPath {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      animation: drawArrow 2s linear forwards 0.5s;
+    }
+
+    @keyframes drawArrow {
+      to { stroke-dashoffset: 0; }
+    }
+
+    .arrowHead {
+      opacity: 0;
+      animation: revealHead 0s linear forwards;
+      animation-delay: 1.25s;
+    }
+
+    @keyframes revealHead {
+      to { opacity: 1; }
+    }
+
+    .accepting {
+      opacity: 0;
+      animation: fadeAccept 0.6s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes fadeAccept {
+      to { opacity: 1; }
+    }
+  </style>
+
+  <!-- Re -->
+  <text x="80" y="170" font-family="Inter, sans-serif" font-size="80" font-weight="700" fill="#1C60B3">
+    Re
+  </text>
+
+  <!-- First g -->
+  <circle cx="211" cy="148" r="22" stroke="#1C60B3" stroke-width="5" fill="none"></circle>
+
+  <!-- First g stem -->
+  <line x1="231" y1="158" x2="231" y2="184" stroke="#1C60B3" stroke-width="5" stroke-linecap="round"></line>
+
+  <!-- First g hook -->
+  <path d="M 231 184 A 18 18 0 0 1 195 184" fill="none" stroke="#1C60B3" stroke-width="5"></path>
+
+  <path d="M 189 184 L 201 184 L 195 174 Z" fill="#1C60B3"></path>
+
+  <!-- Lan -->
+  <text x="239" y="170" font-family="Inter, sans-serif" font-size="80" font-weight="700" fill="#1C60B3">
+    Lan
+  </text>
+
+  <!-- Second g -->
+  <circle cx="407" cy="148" r="22" stroke="#1C60B3" stroke-width="5" fill="none"></circle>
+
+  <!-- Accepting inner circle -->
+  <circle cx="407" cy="148" r="15" stroke="#1C60B3" stroke-width="3" fill="none" class="accepting"></circle>
+
+  <!-- Second g stem -->
+  <line x1="427" y1="158" x2="427" y2="184" stroke="#1C60B3" stroke-width="5" stroke-linecap="round"></line>
+
+  <!-- Second g hook -->
+  <path d="M 427 184 A 18 18 0 0 1 391 184" fill="none" stroke="#1C60B3" stroke-width="5"></path>
+
+  <path d="M 385 184 L 397 184 L 391 174 Z" fill="#1C60B3"></path>
+
+  <!-- Transition curve -->
+  <path class="arrowPath" d="M 211 126
+           C 260 70
+             358 70
+             401 120" fill="none" stroke="#1C60B3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Arrow head -->
+  <g class="arrowHead" transform="translate(407,126) rotate(49)">
+    <path d="M 0 0 L -12 -6 L -12 6 Z" fill="#1C60B3"></path>
+  </g>
+
+  <!-- Master -->
+  <text x="290" y="270" font-family="Inter, sans-serif" font-size="64" font-weight="600" fill="#4A90E2">
+    Master
+  </text>
+
+</svg>
